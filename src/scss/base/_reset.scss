@@ -1,0 +1,21 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+source,
+img {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+li {
+  list-style: none;
+}

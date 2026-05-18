@@ -1,33 +1,82 @@
-<!DOCTYPE html>
+<!-- =========================== ﷽ =============================== -->
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Stats preview card component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Stats preview card component</title>
 
-  Get insights that help your business grow.
+    <!-- ======================= FONT FAMILY =========================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend+Deca:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 0.6875rem;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="content">
+        <article class="card">
+          <aside class="card__profil">
+            <picture>
+              <source
+                srcset="/public/images/image-header-desktop.jpg"
+                media="(min-width: 768px)"
+              />
+              <img
+                src="/public/images/image-header-mobile.jpg"
+                alt="Picture of hero"
+              />
+            </picture>
+          </aside>
+          <aside class="card__infos">
+            <h1 class="card__infos-title">
+              Get insights that help your business grow.
+            </h1>
+            <p class="card__infos-description">
+              Discover the benefits of data analytics and make better decisions
+              regarding revenue, customer experience, and overall efficiency.
+            </p>
+            <ul class="card__infos-result">
+              <li class="result-list-1">
+                <h3>10k+</h3>
+                <p>companies</p>
+              </li>
+              <li class="result-list-2">
+                <h3>314</h3>
+                <p>templates</p>
+              </li>
+              <li class="result-list-3">
+                <h3>12m+</h3>
+                <p>queries</p>
+              </li>
+            </ul>
+          </aside>
+        </article>
+      </section>
+    </main>
 
-  10k+ companies
-  314 templates
-  12m+ queries
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+    <script type="module" src="./src/main.js"></script>
+  </body>
 </html>
