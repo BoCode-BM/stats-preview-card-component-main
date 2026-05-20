@@ -1,0 +1,106 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as *;
+
+body {
+  background: v.$navy-950-main-background;
+}
+
+.card {
+  background: v.$blue-950-card-background;
+  overflow: hidden;
+  border-radius: 0.8rem;
+}
+
+.card__profil {
+  position: relative;
+  background-color: v.$purple-500-accent; // La couleur de base
+
+  img {
+    display: block;
+    mix-blend-mode: multiply; // Fusionne l'image avec le fond violet
+    opacity: 0.75; // Ajuste l'intensité
+  }
+}
+
+.card__infos {
+  padding: 4rem 2.5rem 3rem;
+}
+
+.card__infos-title {
+  font-family: v.$ff-inter;
+  font-size: 3rem;
+  line-height: 1.15;
+  margin-bottom: 1.8rem;
+
+  span {
+    color: v.$purple-500-accent;
+  }
+}
+
+.card__infos-description {
+  font-family: v.$ff-Lexend;
+  font-size: 1.5rem;
+  font-weight: v.$fw-400;
+  color: v.$white-main-paragraph;
+  line-height: 1.65;
+}
+
+.card__infos-result {
+  @include flex(column, space-between, center);
+  gap: 3rem;
+  margin-top: 3.8rem;
+}
+
+.result-list {
+  font-family: v.$ff-Lexend;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  h3 {
+    font-size: 2.9rem;
+  }
+
+  p {
+    text-transform: uppercase;
+    color: v.$white-stat-headings;
+    font-weight: v.$fw-700;
+    letter-spacing: 1px;
+  }
+}
+
+@media (min-width: 768px) {
+  .card__profil {
+    width: 100%;
+    max-width: 50%;
+    flex-shrink: 1;
+    order: 1;
+
+    picture {
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+  }
+
+  .card__infos {
+    width: 50%;
+    padding: 7rem 7.2rem 6rem;
+    text-align: start;
+  }
+
+  .card__infos-title {
+    font-size: 3.6rem;
+    margin-bottom: 2.4rem;
+  }
+
+  .card__infos-description {
+    max-width: 38rem;
+  }
+
+  .card__infos-result {
+    @include flex(row, space-between, center);
+    max-width: 35rem;
+    margin-top: 7rem;
+  }
+}
